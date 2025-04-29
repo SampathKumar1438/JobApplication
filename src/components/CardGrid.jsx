@@ -7,8 +7,7 @@ export default function CardGrid({ reload }) {  // <<< Accept reload
 
   const fetchJobs = async () => {
     try {
-      const res = await axios.get('http://13.203.221.63:5000/jobs');
-      debugger
+      const res = await axios.get('../api/jobs');
       setJobs(res.data);
     } catch (error) {
       console.error(error);

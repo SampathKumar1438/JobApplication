@@ -19,7 +19,7 @@ export default function CreateJobOpening({ onJobCreated }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://13.203.221.63:5000/jobs", formData);
+      await axios.post('../api/jobs', formData);
       alert("Job Created Successfully!");
       onJobCreated();  // Refresh Job Cards
       setFormData({
