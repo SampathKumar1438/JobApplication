@@ -19,7 +19,7 @@ export default function CreateJobOpening({ onJobCreated }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('../api/jobs', formData);
+      await axios.post('/.netlify/functions/jobs', formData);
       alert("Job Created Successfully!");
       onJobCreated();  // Refresh Job Cards
       setFormData({
