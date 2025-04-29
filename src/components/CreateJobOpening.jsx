@@ -19,7 +19,7 @@ export default function CreateJobOpening({ onJobCreated }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/.netlify/functions/jobs', formData);
+      await axios.post('https://backend-jobhunt.onrender.com/jobs', formData);
       alert("Job Created Successfully!");
       onJobCreated();  // Refresh Job Cards
       setFormData({

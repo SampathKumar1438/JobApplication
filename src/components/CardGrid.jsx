@@ -7,7 +7,7 @@ export default function CardGrid({ reload }) {  // <<< Accept reload
 
   const fetchJobs = async () => {
     try {
-      const res = await axios.get('/.netlify/functions/jobs');
+      const res = await axios.get('https://backend-jobhunt.onrender.com/jobs');
       setJobs(res.data);
     } catch (error) {
       console.error(error);
